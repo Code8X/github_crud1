@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Card</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-body"></div>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <div>Post</div>
+                        <div>
+                            <a href="#" class="btn btn-success">Create Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="md-2">
+                        <form class="form-inline" action="">
+                            <label for="categary_filter"
+                                >Filter by Category &nbsp;</label
+                            >
+                            <select
+                                class="form-control"
+                                id="categary_filter"
+                                name="category"
+                                id="keyword"
+                            >
+                                <option value="">Select Catelory1</option>
+                                <option value="">Select Catelory2</option>
+                            </select>
+                            <label for="keyword">&nbsp;&nbsp;</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="keyword"
+                                placeholder="Nhập vao thông tin cần tìm"
+                            />
+                            <span>&nbsp;&nbsp;</span>
+                            <button  class="btn btn-primary">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    <div class="table-responsive"></div>
+                    <table style ="width: 100%;" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Created By</th>
+                                <th>Category</th>
+                                <th>Total Comments 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

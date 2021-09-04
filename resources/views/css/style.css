@@ -1,0 +1,128 @@
+body {
+    background-color: rgb(236, 236, 241);
+    /*  background-image: url("http://thietke.website/wp-content/uploads/2014/10/css3-logo-300x300.png");*/
+    background-repeat: no-repeat;
+
+    margin-top: 100px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    font-variant: small-caps;
+    color: #fcfaf4;
+
+    background: yellow;
+    padding: 20px 20px 20px 80px; /* trên 20px, phải 20px, đáy 20px, trái 80px */
+
+    border-top-width: thick;
+    border-top-style: solid;
+    border-top-color: red;
+    border-bottom-width: thick;
+    border-bottom-style: solid;
+    border-bottom-color: blue;
+    border-right-width: thick;
+    border-right-style: solid;
+    border-right-color: green;
+    border-left-width: thick;
+    border-left-style: solid;
+    border-left-color: orange;
+
+    /* border-width: thick;
+    border-style: dotted;
+    border-color: rgb(38, 0, 255); */
+}
+h2 {
+    background: orange;
+    padding-left: 120px; /* trên 0, phải 0, đáy 0, trái 120px */
+
+    border-width: 20px;
+    border-style: outset;
+    border-color: red;
+}
+p {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: blue;
+}
+ul {
+    border-width: thin;
+    border-style: solid;
+    border-color: orange;
+}
+
+#chuong {
+    color: chartreuse;
+    font-family: "Times New Roman", Times, serif;
+}
+ul.ch {
+    font-size: 15px;
+    color: aquamarine;
+    margin-left: 200px;
+}
+
+a:link {
+    color: #6699cc;
+}
+
+a:visited {
+    color: #660099;
+}
+
+a:active {
+    background-color: #ffff00;
+}
+
+a:hover {
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: red;
+}
+a.bai6:hover {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: blue;
+    background-color: yellow;
+}
+span.benefit {
+    color: red;
+}
+
+#democrats {
+    background: blue;
+}
+
+#republicans {
+    background: rgb(0, 247, 255);
+}
+
+#picture {
+    float:left;
+    width: 150px;
+  }
+
+  #column1 {
+    float: left;
+    width: 33%;
+  }
+
+  #column2 {
+    float: left;
+    width: 33%;
+  }
+
+  #column3 {
+    float: left;
+    width: 33%;
+  }
+#picture {
+    float: left;
+    width: 150px;
+    }
+
+.floatstop {
+   clear: both;
+  }
