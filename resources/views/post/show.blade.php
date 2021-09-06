@@ -16,8 +16,8 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr align="center">
-                                    <th >Field name</th>
-                                    <th >Value</th>
+                                    <th  width ="20%">Field name</th>
+                                    <th width = "80%" >Value</th>
                                 </tr>
                             </thead>
                             <tbody>

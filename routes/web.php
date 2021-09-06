@@ -23,6 +23,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //--------------------------posts----------------------------------------------------
+Route::group(['middleware'=>['auth']],function () {
+
+
 //display
  Route::get('/posts', 'PostController@index')->name('posts.index');//display all data
  Route::get('/posts/create', 'PostController@create')->name('posts.create');//add new
@@ -37,7 +40,7 @@ Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');//get 
 Route::put('/posts/{id}/update', 'PostController@update')->name('posts.update'); //post for edit
 //delete
 Route::delete('/posts/{id}/destroy', 'PostController@destroy')->name('posts.destroy'); //delete with $id
-
+});
 //-----------------------get masterdata-----------------------------------
 //Route::get('getmasterdata',[PostController::class,'getmasterdata']);
 Route::get('getmasterdata','PostController@getmasterdata')->name('masterdata');

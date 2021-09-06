@@ -126,7 +126,15 @@ class PostController extends Controller
     public function show($id)
     {
         // dd($id);
-        $data['posts'] = Post::findOrFail($id);
+        $data['posts'] =$post= Post::findOrFail($id);
+
+        //policy cach 1.
+        // if($posts->user_id !=auth()->id())
+        // {
+        //     abort(403);
+        // }
+        // policy cach 2
+        $this->authorize('view', $post);
 
         return view('post.show', $data);
     }
@@ -139,7 +147,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $data['posts'] = Post::findOrFail($id);
+        $data['posts'] =$post= Post::findOrFail($id);
+        $this->authorize('update', $post);
+
         $data['categories'] = Category::orderby('id', 'desc')->get();
         $data['tags'] = Tag::orderby('id', 'desc')->get();
 
@@ -157,7 +167,8 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
 
-        // $this->authorize('update', $post);
+        $this->authorize('update', $post); //** */
+
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
@@ -245,7 +256,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
-        //  $this->authorize('delete', $post);
+         $this->authorize('delete', $post);
 
 
         $old_path = public_path() . '/post_images/' . $post->image; // lay file da luu trc do
